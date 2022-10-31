@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView= findViewById(R.id.bottom_navigation);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
         BottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

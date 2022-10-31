@@ -1,16 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     tools:context=".HomeFragment">
+
+    <EditText
+        android:id="@+id/editTextNumberSigned4"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="271dp"
+        android:ems="10"
+        android:hint="הכנס היקף מותניים"
+        android:inputType="numberSigned"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="2dp"
+        android:text=" מותניים:"
+        android:textAlignment="viewEnd"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned3"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="198dp"
+        android:ems="10"
+        android:hint="הכנס משקל"
+        android:inputType="numberSigned"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/editTextNumberSigned4"
+        android:text="משקל:"
+        android:textAlignment="viewEnd"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-14dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="25dp"
+        android:text="גובה:"
+        android:textAlignment="viewEnd"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned2"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="הכנס גובה"
+        android:inputType="numberSigned"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update Fragment"
-        android:textSize="25dp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignBottom="@+id/editTextNumberSigned"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="9dp"
+        android:text="גיל:"
+        android:textAlignment="textEnd"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="הכנס גיל"
+        android:inputType="numberSigned"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>

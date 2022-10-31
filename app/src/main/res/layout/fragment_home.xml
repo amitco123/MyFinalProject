@@ -6,11 +6,67 @@
     tools:context=".HomeFragment">
 
     <TextView
+        android:id="@+id/textView8"
+        android:layout_width="253dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="394dp"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="239dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="243dp"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="518dp"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/fats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="25dp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="306dp"
+        android:text="אחוז השומן שלך הוא:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:text="כמות הקלוריות נשאר לך לצרוך:"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="233dp"
+        android:text="כמות החלבונים שנשאר לך לצרוך:"
+        android:textSize="25dp" />
 
 
 </RelativeLayout>
