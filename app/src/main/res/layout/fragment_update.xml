@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     tools:context=".HomeFragment">
-
     <EditText
         android:id="@+id/editTextNumberSigned4"
         android:layout_width="243dp"
@@ -113,12 +112,56 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="הכנס גיל"
         android:inputType="numberSigned"
         android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="141dp"
+        android:layout_height="127dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="158dp">
+
+        <RadioButton
+            android:id="@+id/mass"
+            android:layout_width="103dp"
+            android:layout_height="64dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:onClick="CheckBtn"
+            android:text="מסה"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/hitov"
+            android:layout_width="103dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="269dp"
+            android:onClick="CheckBtn"
+            android:text="חיטוב"
+            android:textSize="25dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginBottom="139dp"
+        android:text="עדכן" />
 
 
 </RelativeLayout>
