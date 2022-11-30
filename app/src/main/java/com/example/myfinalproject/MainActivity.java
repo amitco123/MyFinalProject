@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()){
                 case R.id.home:
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
+
                     return true;
                 case R.id.add:
                     getSupportFragmentManager().beginTransaction().replace(R.id.container,addFragment).commit();
