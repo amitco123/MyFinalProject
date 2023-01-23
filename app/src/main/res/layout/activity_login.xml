@@ -9,12 +9,15 @@
 
     <TextView
         android:id="@+id/Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="211dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="628dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="619dp"
         android:text="Login"
         android:textAlignment="center"
         android:textSize="34sp" />
@@ -23,7 +26,9 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="166dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="20dp"
@@ -37,52 +42,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
-        android:layout_marginTop="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="43dp"
         android:background="#30ffffff"
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:drawablePadding="20dp"
         android:hint="Password"
-        android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_btn"
+        android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="295dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:onClick="loginbt"
-        android:text="LOGIN" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/forgotpass"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="24dp"-->
-<!--        android:layout_below="@+id/login_btn"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:layout_marginBottom="230dp"-->
-<!--        android:text="Forgot Password?"-->
-<!--        android:textColor="@color/white" />-->
+        android:text="LOGIN"
+        />
 
     <TextView
-        android:id="@+id/signup"
+        android:id="@+id/forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="194dp"
-        android:text="dont have account, register!"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="255dp"
+        android:text="Forgot Password?"
         android:textColor="@color/white" />
-
-
 </RelativeLayout>
