@@ -7,75 +7,223 @@
     android:background="@drawable/background"
     tools:context=".Login">
 
-    <TextView
-        android:id="@+id/Login"
-        android:layout_width="211dp"
-        android:layout_height="74dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginBottom="619dp"
-        android:text="Login"
-        android:textAlignment="center"
-        android:textSize="34sp" />
-
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/otp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="166dp"
-        android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-        android:drawablePadding="20dp"
-        android:hint="Username"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="43dp"
-        android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:drawablePadding="20dp"
-        android:hint="Password"
-        android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="160dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="295dp"
-        android:backgroundTint="@color/design_default_color_secondary"
-        android:text="LOGIN"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="OTP"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:layout_below="@+id/btngenerateOTP"
+        android:visibility="invisible"
         />
 
+    <!--    <EditText-->
+    <!--        android:id="@+id/otp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="OTP"-->
+    <!--        android:inputType="number"-->
+    <!--        android:layout_below="@+id/btngenerateOTP"-->
+    <!--        android:visibility="invisible"/>-->
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:text="Enter Your Phone No."
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="255dp"
-        android:text="Forgot Password?"
-        android:textColor="@color/white" />
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/phone"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Phone No."-->
+    <!--        android:inputType="phone"-->
+    <!--        android:layout_below="@+id/text"/>-->
+
+    <Button
+        android:id="@+id/btngenerateOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Generate OTP"
+        android:textSize="30dp"
+
+        />
+
+
+
+
+    <Button
+        android:id="@+id/btnverifyOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp"
+        android:layout_marginBottom="20dp"
+        android:text="verify OTP"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnverifyOTP"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="full name"
+        android:padding="20dp"
+        android:layout_below="@+id/text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:visibility="invisible"
+        />
+    <!--        android:drawableLeft="@drawable/ic_baseline_person_outline_24"-->
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:hint="phone"
+        android:inputType="phone"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:layout_below="@+id/text"
+        />
+    <!--        android:visibility="invisible"/>-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupbtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogender"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="134dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="continue"
+        android:visibility="invisible"/>
+
+    <RadioGroup
+        android:id="@+id/radiogender"
+        android:layout_width="169dp"
+        android:layout_height="139dp"
+        android:layout_below="@+id/textbirth"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="male"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <!--            android:visibility="invisible"-->
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="female"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <!--            android:visibility="invisible"-->
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textbirth"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="date of barth:"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:visibility="invisible"/>
+    <!--        android:visibility="invisible"/>-->
+
+    <TextView
+        android:id="@+id/genrashin"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Select a gender:"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/birth"
+        style="?android:spinnerStyle"
+        android:layout_width="203dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/textbirth"
+        android:layout_marginTop="20dp"
+        android:onClick="openDatePicker"
+        android:text="select date"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:visibility="invisible"/>
+    <!--        android:visibility="invisible"-->
+
 </RelativeLayout>
