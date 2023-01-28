@@ -23,23 +23,6 @@ public class UpdateFragment extends Fragment {
 
     }
 
-    public void checkButton(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch(view.getId())
-        {
-            case R.id.mass:
-                if(checked) {
-                    is=1;
-                }
-                break;
-            case R.id.hitov:
-                if(checked) {
-                    is = 2;
-                }
-                break;
-        }
-    }
 
     }
 
