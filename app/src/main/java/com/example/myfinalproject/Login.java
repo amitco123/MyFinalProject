@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
     EditText phone, otp, A, fullname;
     Button btngenOTP, btnverify, signupbtn;
     RadioGroup radiogender;
-    RadioButton femele, male;
+    RadioButton female, male;
     FirebaseAuth mAuth;
     String verificationID;
     ProgressBar bar;
@@ -91,24 +91,67 @@ public class Login extends AppCompatActivity {
         initDatePicker();
         dateButton = findViewById(R.id.birth);
         dateButton.setText(getTodayDate());
-        femele = findViewById(R.id.female);
-        male = findViewById(R.id.male);
+
         signup = findViewById(R.id.Signup);
         birth = findViewById(R.id.textbirth);
         gender = findViewById(R.id.gender);
+        female = findViewById(R.id.female);
+        male = findViewById(R.id.male);
+
+
+        selectImageBtn = findViewById(R.id.selectImageButton);
+        image = findViewById(R.id.firebaseImage);
+
+
+
+
+
+
+
 
         signupbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String thegender ="";
+                if(male.isChecked())
+                    thegender="male";
+                else
+                    thegender="female";
+                String name = fullname.getText().toString();
+                String date = getTodayDate();
+                HashMap<String, Object> hashMap = new HashMap<>();
+                hashMap.put("name", name);
+                hashMap.put("date", date);
+                hashMap.put("gender", thegender);
+                String phone1 = phone.getText().toString();
+                progressDialog = new ProgressDialog(Login.this);
+                progressDialog.setTitle("uploading file...");
+                progressDialog.show();
+                storageReference = FirebaseStorage.getInstance().getReference("image/" + phone1);
+                storageReference.putFile(imageUri)
+                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                image.setImageURI(null);
+                                Toast.makeText(Login.this, "successfully uploaded", Toast.LENGTH_SHORT).show();
+                                if (progressDialog.isShowing()) {
+                                    progressDialog.dismiss();
+                                }
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                if (progressDialog.isShowing()) {
+                                    progressDialog.dismiss();
+                                    Toast.makeText(Login.this, "Failed", Toast.LENGTH_SHORT).show();
+                                }
 
-                String name= fullname.getText().toString();
-                String date= getTodayDate();
-                HashMap<String,Object> hashMap = new HashMap<>();
-                hashMap.put("name",name);
-                hashMap.put("date",date);
-                String phone1=phone.getText().toString();
+                            }
+                        });
+
+
                 FirebaseFirestore.getInstance().collection("Users")
-                        .document(""+phone1)
+                        .document("" + phone1)
                         .set(hashMap)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -119,9 +162,10 @@ public class Login extends AppCompatActivity {
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Login.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
+                startActivity(new Intent(Login.this, MainActivity.class));
             }
         });
 
@@ -153,7 +197,33 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        selectImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent();
+                intent.setType("image/");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, 100);
+            }
+        });
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 100 && data != null && data.getData() != null)
+        {
+            imageUri = data.getData();
+            image.setImageURI(imageUri);
+
+        }
+    }
+
+
+
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks
             mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -220,7 +290,7 @@ public class Login extends AppCompatActivity {
                         btnverify.setVisibility(View.INVISIBLE);
                         btngenOTP.setVisibility(View.INVISIBLE);
                         text.setVisibility(View.INVISIBLE);
-
+                        gender.setVisibility(View.VISIBLE);
                         signupbtn.setVisibility(View.VISIBLE);
                         fullname.setVisibility(View.VISIBLE);
                         dateButton.setVisibility(View.VISIBLE);
@@ -228,7 +298,8 @@ public class Login extends AppCompatActivity {
                         birth.setVisibility(View.VISIBLE);
                         signup.setVisibility(View.VISIBLE);
                         male.setVisibility(View.VISIBLE);
-                        femele.setVisibility(View.VISIBLE);
+                        female.setVisibility(View.VISIBLE);
+                        selectImageBtn.setVisibility(View.VISIBLE);
                     } else {
                         //user is exists, just do login
                         Toast.makeText(Login.this, "already", Toast.LENGTH_SHORT).show();
@@ -321,6 +392,6 @@ public class Login extends AppCompatActivity {
     public void openDatePicker(View view) {
         datePickerDialog.show();
     }
-
 }
+
 
