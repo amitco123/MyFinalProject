@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
     ProgressDialog progressDialog;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -317,16 +317,16 @@ public class Login extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        FirebaseUser currentUser =  FirebaseAuth.getInstance().getCurrentUser();
-//        if(currentUser!=null)
-//        {
-//            startActivity( new Intent(Login.this , MainActivity.class));
-//            finish();
-//      }
-//    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser =  FirebaseAuth.getInstance().getCurrentUser();
+        if(currentUser!=null)
+        {
+            startActivity( new Intent(Login.this , MainActivity.class));
+            finish();
+      }
+    }
 
 
     private String getTodayDate() {

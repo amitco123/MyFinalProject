@@ -4,4 +4,8 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
+    android:layout_marginHorizontal="8dp"
+    android:paddingHorizontal="8dp"
+    android:elevation="4dp"
+    android:gravity="center"
     tools:context=".HomeFragment"/>
