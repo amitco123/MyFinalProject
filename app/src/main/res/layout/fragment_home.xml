@@ -3,95 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:layoutDirection="ltr"
+    >
 
 
-    <RadioGroup
-        android:id="@+id/rgBtnGroup"
-        android:layout_width="260dp"
-        android:layout_height="68dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="375dp"
-        android:background="@drawable/radio_group_backgorund"
-        android:orientation="horizontal">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/rbMale"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/radio_button_bg"
-            android:button="@null"
-            android:checked="true"
-            android:gravity="center"
-            android:text="Male"
-            android:textColor="@drawable/button_text_checked_color"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/empty_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:alpha="0.1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <RadioButton
-            android:id="@+id/rbFemale"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_button_bg"
-            android:button="@null"
-            android:checked="false"
-            android:gravity="center"
-            android:text="female"
-            android:textColor="@drawable/button_text_checked_color"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </RadioGroup>
 
-    <RadioGroup
-        android:id="@+id/rgBtnGroup2"
-        android:layout_width="274dp"
-        android:layout_height="79dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/radio_group_backgorund"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/rbYourloc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/radio_button_bg"
-            android:button="@null"
-            android:checked="true"
-            android:gravity="center"
-            android:text="Your loc"
-            android:textColor="@drawable/button_text_checked_color"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-
-        <RadioButton
-            android:id="@+id/rbAnotherloc"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_weight="1"
-            android:background="@drawable/radio_button_bg"
-            android:button="@null"
-            android:checked="false"
-            android:gravity="center"
-            android:text="Another loc"
-            android:textColor="@drawable/button_text_checked_color"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </RadioGroup>
 
     <TextView
-        android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:text="address:  "
-        android:textSize="30sp"
-        android:layout_marginBottom="144dp" />
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="558dp"
+        android:alpha="0.4"
+        android:text="יאפס עדין לא הזדמנת למה על מי אתה משקר שיש לך חברים"
+        android:textSize="20sp" />
 </RelativeLayout>

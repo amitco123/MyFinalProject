@@ -20,7 +20,7 @@
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawableLeft="@drawable/baseline_phone_24"
         android:layout_below="@+id/btngenerateOTP"
         android:visibility="invisible"
         />
@@ -110,9 +110,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/text"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawableLeft="@drawable/baseline_person_outline_24"
         android:drawablePadding="20dp"
         android:hint="full name"
         android:padding="20dp"
@@ -131,7 +131,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:background="#30ffffff"
-        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawableLeft="@drawable/baseline_phone_24"
         android:drawablePadding="20dp"
         android:hint="phone"
         android:inputType="phone"
@@ -267,5 +267,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:visibility="invisible"/>
 </RelativeLayout>

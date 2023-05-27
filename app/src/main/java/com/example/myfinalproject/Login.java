@@ -316,7 +316,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
-
+ // אם כבר התחברת מהטלפון אז זה מתחבר ישר
     @Override
     protected void onStart() {
         super.onStart();
